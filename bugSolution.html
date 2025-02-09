@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Correctly using innerHTML by escaping or using DOM manipulation
+    // Using DOM manipulation (preferred method for security and maintainability):
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This <p> tag is correctly parsed.";
+    document.getElementById("myDiv").appendChild(newParagraph);
+    
+    //Alternatively using innerHTML with escaping: 
+    // document.getElementById("myDiv").innerHTML = "<p>This &lt;p&gt; tag is correctly parsed.</p>";
+  </script>
+</body>
+</html>
