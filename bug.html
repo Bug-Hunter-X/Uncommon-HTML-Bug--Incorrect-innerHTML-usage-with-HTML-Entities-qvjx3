@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to modify content that may contain HTML entities
+    document.getElementById("myDiv").innerHTML = "<p>This &lt;p&gt; tag is incorrectly parsed.</p>";
+  </script>
+</body>
+</html>
